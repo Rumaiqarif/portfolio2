@@ -1,0 +1,1346 @@
+/* Global Reset and Basic Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #121212; /* Dark background for a techy feel */
+	color: #ddd; /* Light gray text */
+	line-height: 1.6;
+  }
+  
+  a {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+  ul {
+	list-style: none;
+  }
+  
+  img {
+	max-width: 100%;
+  }
+  
+ /* Navbar Styles */
+.navbar {
+	background-color: #111;
+	padding: 20px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	box-shadow: 0px 2px 10px rgba(0, 255, 255, 0.3); /* Neon glow effect */
+	transition: background-color 0.3s ease; /* Smooth background change */
+	display: flex; /* Flexbox layout for horizontal alignment */
+	justify-content: space-between; /* Ensures space between logo and menu */
+	align-items: center; /* Center items vertically */
+  }
+  
+  /* Sticky navbar styling */
+  .navbar.sticky {
+	background-color: #333; /* Darker background on scroll */
+  }
+  
+ /* Logo Styling */
+.navbar .logo {
+	font-size: 36px; /* Increased font size for better visibility */
+	color: #0ff; /* Neon blue color for the logo */
+	letter-spacing: 2px; /* Increased letter-spacing for a modern look */
+	font-weight: 700; /* Bold font weight for impact */
+	text-transform: uppercase; /* Uppercase letters */
+	flex-shrink: 0; /* Prevent logo from shrinking */
+	margin-left: 20px; /* Add some left margin for spacing */
+	font-family: 'Poppins', sans-serif; /* Add a modern font family */
+	transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover Animation for Logo */
+  .navbar .logo:hover {
+	transform: scale(1.1); /* Logo will slightly grow on hover */
+	color: #ffcc00; /* Change the color to a golden hue on hover */
+  }
+  
+  /* Add a glowing effect to the logo */
+  .navbar .logo::before {
+	content: ''; /* Empty content for the pseudo-element */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 255, 255, 0.4); /* Neon blue glow */
+	filter: blur(10px); /* Blur effect to create the glow */
+	z-index: -1; /* Place the glow behind the text */
+	animation: glowing 1.5s infinite ease-in-out; /* Animation for glowing effect */
+  }
+  
+  /* Animation for glowing effect */
+  @keyframes glowing {
+	0% {
+	  opacity: 0.5;
+	}
+	50% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0.5;
+	}
+  }
+  
+  /* Responsive design for logo */
+  @media (max-width: 768px) {
+	.navbar .logo {
+	  font-size: 28px; /* Slightly smaller logo size on mobile */
+	  letter-spacing: 1px; /* Reduce letter-spacing for smaller screens */
+	}
+  }
+  
+  /* Menu container styling */
+  .navbar .menu {
+	display: flex; /* Flexbox for horizontal alignment of menu items */
+	align-items: center; /* Center items vertically */
+	list-style-type: none; /* Remove default list styling */
+	margin-top: 0; /* Remove any margin on top */
+	padding: 0;
+	margin-right: 20px; /* Add right margin for spacing */
+	justify-content: flex-end; /* Align items to the right */
+  }
+  
+  /* Styling for each menu item */
+  .navbar .menu li {
+	margin: 0 20px; /* Space out the items */
+  }
+  
+  .navbar .menu a {
+	color: #bbb; /* Light grey color for links */
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	border-radius: 4px;
+	text-decoration: none; /* Remove underline */
+	transition: all 0.3s ease;
+	display: inline-block; /* Ensure it's properly displayed */
+  }
+  
+  /* Hover effect for menu items */
+  .navbar .menu a:hover {
+	color: #111; /* Dark text on hover */
+	background-color: #0ff; /* Neon blue background on hover */
+	box-shadow: 0px 5px 15px rgba(0, 255, 255, 0.5); /* Glowing effect */
+  }
+  
+  /* Hide hamburger menu button on desktop */
+  .navbar .menu-btn {
+	display: none;
+	margin-right: 10px;
+  }
+  
+  /* Icon for the hamburger menu */
+  .navbar .menu-btn i {
+	color: #0ff;
+	font-size: 25px;
+  }
+  
+  /* Ensure navbar items are visible */
+  .navbar .menu li a {
+	color: white !important; /* Force color visibility */
+  }
+  
+  /* Ensure logo and menu stay on same line */
+  .navbar .max-width {
+	display: flex;
+	justify-content: space-between; /* Distribute space evenly between the logo and the menu */
+	width: 100%;
+	align-items: center; /* Center items vertically */
+  }
+  
+  
+ /* Home Section */
+.home {
+    background: #1e1e1e; /* Darker background for a more refined look */
+    color: #fff;
+    padding: 120px 0; /* Increased padding for more spaciousness */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Hide overflow for smooth transitions */
+}
+.btn {
+    display: inline-block;
+    background-color: #0ff;
+    color: #222;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #222;
+    color: #0ff;
+}
+
+
+/* Text Styles */
+ .home .text-2 {
+    font-family: 'Roboto', sans-serif; /* New font for a modern look */
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Add uppercase for all text */
+    position: relative;
+}
+
+/* Text 1 Styling */
+.home .text-1 {
+    font-size: 2.5rem; /* Larger font size for the first text */
+    color: rgba(255, 255, 255, 0.7); /* Slightly faded color for the first text */
+}
+
+/* Text 2 Styling */
+.home .text-2 {
+    font-size: 4rem; /* Larger font size for name */
+    font-weight: 700; /* Bold weight */
+    color: #0ff; /* Neon blue for emphasis */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.8); /* Glow effect for the name */
+}
+
+/* Text 3 Styling */
+.home .text-3 {
+    font-size: 2.2rem;
+    color: #fff; /* White color for the last text */
+}
+
+/* Styling for the .typing class (for typed text) */
+.home .typing {
+    font-size: 2.5rem; /* Larger font size for the typed text */
+    font-weight: 700; /* Bold weight for emphasis */
+    color: #ff4081; /* Pinkish color */
+    text-transform: none; /* Remove uppercase */
+    letter-spacing: 2px;
+	text-transform: uppercase; /* Slightly increased letter spacing */
+    display: inline-block; /* Make sure it behaves like inline text */
+    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081; /* Glowing effect */
+}
+
+/* Button Link Styling */
+.home a {
+    font-size: 1.5rem; /* Larger font for the button */
+    color: #fff;
+    padding: 15px 40px; /* Increased padding for a larger button */
+    border: 2px solid #0ff;
+    border-radius: 50px; /* Fully rounded corners for a pill shape */
+    margin-top: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.home a:hover {
+    background-color: #0ff;
+    color: #222; /* Darker text color when hovered */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing effect on hover */
+}
+
+/* Additional Styling for Animations */
+.home .home-content {
+    position: relative;
+    z-index: 10;
+}
+
+.home a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0ff;
+    transition: all 0.4s ease;
+    opacity: 0;
+    z-index: -1;
+}
+
+.home a:hover::before {
+    opacity: 0.1;
+}
+  
+/* About Section */
+.about {
+	background-color: #181818; /* Dark theme background */
+	padding: 80px 0;
+	font-family: 'Poppins', sans-serif; /* Consistent font */
+  }
+  
+  /* Section Title */
+  .about .title {
+	text-align: center;
+	font-size: 2.5rem;
+	color: #0ff; /* Neon blue */
+	text-transform: uppercase;
+	margin-bottom: 50px;
+	letter-spacing: 2px;
+  }
+  .typing-2{
+	font-size: 1.5rem; /* Larger font size for the typed text */
+    font-weight: 700; /* Bold weight for emphasis */
+    color: #ff4081; /* Pinkish color */
+    text-transform: none; /* Remove uppercase */
+    letter-spacing: 2px;
+	text-transform: uppercase; /* Slightly increased letter spacing */
+    display: inline-block; /* Make sure it behaves like inline text */
+    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+
+  }
+  /* Subtitle Styling */
+  .about .subtitle {
+	text-align: center;
+	font-size: 1.2rem;
+	color: #ff00ff; /* Neon magenta */
+	margin-bottom: 50px;
+	margin-top: -60px;
+	font-weight: 500;
+	text-shadow: 0px 0px 10px rgba(255, 0, 255, 0.6); /* Glowing effect */
+	font-family: 'Poppins', sans-serif;
+  }
+  
+  /* About Content Layout */
+  .about .about-content {
+	display: flex;
+	gap: 50px;
+	flex-wrap: wrap; /* Allows wrapping for responsiveness */
+  }
+  
+  /* Left Column (Image) */
+  .about .column.left {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .about .column.left img {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%; /* Circular image */
+	border: 5px solid #0ff; /* Neon blue border */
+	box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5); /* Neon blue glow */
+	object-fit: cover;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about .column.left img:hover {
+	transform: scale(1.05); /* Zoom effect */
+	box-shadow: 0 8px 30px rgba(0, 255, 255, 0.7); /* Intense glow */
+  }
+  
+  /* Right Column (Text) */
+  .about .column.right {
+	flex: 1;
+	background-color: #222; /* Dark background */
+	padding: 30px;
+	border-radius: 10px; /* Smooth corners */
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+	color: #ddd; /* Light text */
+	font-size: 1.1rem; /* Readable font size */
+	line-height: 1.8;
+  }
+  
+  .about .column.right:hover {
+	transform: translateY(-5px); /* Subtle lift effect */
+	box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3); /* Slight glow */
+  }
+  
+  .about .column.right .text {
+	font-size: 1.6rem; /* Emphasized intro text */
+	color: #0ff; /* Neon blue text */
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+  }
+  
+  .about .column.right p {
+	margin-bottom: 20px;
+	color: #bbb; /* Softer gray for paragraph text */
+  }
+  
+  /* Download CV Button */
+  .about .column.right a {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #0ff; /* Neon blue button */
+	color: #181818; /* Dark text for contrast */
+	text-transform: uppercase;
+	font-weight: 600;
+	border-radius: 25px;
+	text-decoration: none;
+	transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  
+  .about .column.right a:hover {
+	background-color: #181818; /* Dark background */
+	color: #0ff; /* Neon blue text */
+	box-shadow: 0px 5px 20px rgba(0, 255, 255, 0.7); /* Glowing effect */
+  }
+  
+  /* Responsive Design for About Section */
+  @media (max-width: 768px) {
+	/* General Mobile Adjustments */
+	.about {
+	  padding: 50px 20px; /* Reduce padding for smaller screens */
+	}
+  
+	/* Title Adjustments */
+	.about .title {
+	  font-size: 2rem;
+	  margin-bottom: 30px;
+	}
+  
+	.about .subtitle {
+	  font-size: 1rem;
+	  margin-top :-30px;
+	  margin-bottom: 40px;
+	}
+  
+	/* Adjust About Content Layout */
+	.about .about-content {
+	  flex-direction: column; /* Stack columns vertically */
+	  align-items: center;
+	  gap: 30px; /* Reduce gap for mobile */
+	}
+  
+	/* Left Column Styling */
+	.about .column.left img {
+	  width: 200px; /* Smaller image size */
+	  height: 200px;
+	}
+  
+	/* Right Column Styling */
+	.about .column.right {
+	  width: 100%; /* Take full width on mobile */
+	  text-align: center; /* Center-align text */
+	  padding: 20px;
+	}
+  
+	.about .column.right .text {
+	  font-size: 1.4rem; /* Adjust font size */
+	}
+  
+	.about .column.right p {
+	  font-size: 1rem;
+	  line-height: 1.6;
+	}
+  
+	.about .column.right a {
+	  font-size: 0.9rem;
+	  padding: 8px 18px; /* Adjust button size */
+	  margin-top: 10px;
+	}
+  }
+  
+/* General styles for the projects section */
+#projects {
+	background-color: #121212; /* Dark background */
+	padding: 60px 20px;
+	font-family: 'Roboto', sans-serif;
+	color: #ddd; /* Light gray text for contrast */
+  }
+  
+  #projects .max-width {
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  
+  #projects .title {
+	text-align: center;
+	font-size: 2.5em;
+	margin-bottom: 30px;
+	color: #0ff; /* Neon blue for the title */
+	text-transform: uppercase;
+	letter-spacing: 1px;
+  }
+  
+  #projects .proj-content {
+	display: flex;
+	justify-content: flex-start; /* Align projects to the left */
+	gap: 30px;
+	overflow-x: auto; /* Enable horizontal scrolling */
+	scroll-behavior: smooth; /* Smooth scroll for mobile */
+	padding-bottom: 10px; /* Space at the bottom for better visibility */
+  }
+  
+  #projects .card {
+	background-color: #222; /* Dark background for the project cards */
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Initial shadow */
+	width: 90%; /* Make cards larger on mobile */
+	width: 350px; /* Ensure minimum card size */
+	flex-shrink: 0; /* Prevent cards from shrinking */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
+  }
+  
+  #projects .card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5); /* Neon blue shadow on hover */
+  }
+  
+  #projects .box {
+	padding: 20px;
+	text-align: center;
+  }
+  
+  #projects .box i {
+	font-size: 3em;
+	color: #0ff; /* Neon blue icon color */
+	margin-bottom: 20px;
+  }
+  
+  #projects .box .text {
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #ddd; /* Light gray text for project titles */
+	margin-bottom: 15px;
+  }
+  
+  #projects .box p {
+	font-size: 1em;
+	color: #bbb; /* Slightly lighter gray for descriptions */
+	line-height: 1.5;
+	margin-bottom: 0;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1024px) {
+	#projects .proj-content {
+	  justify-content: flex-start;
+	}
+  
+	#projects .card {
+	  width: 45%;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	#projects .card {
+	  width: 90%;
+	}
+  
+	#projects .title {
+	  font-size: 2em;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	#projects .title {
+	  font-size: 1.5em;
+	}
+  
+	#projects .card {
+	  width: 90%; /* Adjust width for smaller devices */
+	  min-width: 250px;
+	}
+  
+	#projects .box i {
+	  font-size: 2em;
+	}
+  
+	#projects .box .text {
+	  font-size: 1.2em;
+	}
+  
+	#projects .box p {
+	  font-size: 0.9em;
+	}
+  }
+  
+  
+  /* Skills Section */
+.skills {
+	background-color: #181818;
+	padding: 80px 0;
+	font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Section Title */
+  .skills .title {
+	text-align: center;
+	font-size: 2.5rem;
+	color: #0ff;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+	letter-spacing: 2px;
+  }
+  
+  /* Skills Content Layout */
+  .skills .skills-content {
+	display: flex;
+	gap: 50px;
+	flex-wrap: wrap;
+	padding: 10px;
+  }
+  
+  .skills .column {
+	flex: 1;
+	min-width: 300px;
+  }
+  
+  /* Left Column */
+  .skills .column.left .text {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: #ddd;
+	margin-bottom: 20px;
+  }
+  
+  .skills .column.left p {
+	font-size: 1rem;
+	line-height: 1.8;
+	color: #bbb;
+	margin-bottom: 20px;
+  }
+  
+  .skills .column.left a {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #0ff;
+	color: #181818;
+	text-transform: uppercase;
+	font-weight: 600;
+	border-radius: 25px;
+	text-decoration: none;
+	transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .skills .column.left a:hover {
+	background-color: #181818;
+	color: #0ff;
+	border: 2px solid #0ff;
+  }
+  
+  /* Right Column - Skill Bars */
+  .skills .bars {
+	margin-bottom: 30px;
+  }
+  
+  .skills .info {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.1rem;
+	color: #ddd;
+	margin-bottom: 10px;
+  }
+  
+  .skills .line {
+	position: relative;
+	height: 10px;
+	background-color: #444;
+	border-radius: 5px;
+	overflow: hidden;
+  }
+  
+  .skills .line::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	border-radius: 5px;
+	animation: fill-bar 1.5s ease-in-out;
+  }
+  
+  /* Skill Specific Bars */
+  .skills .html::after {
+	width: 90%;
+	background-color: #0078ff;
+  }
+  
+  .skills .css::after {
+	width: 85%;
+	background-color: #00ff00;
+  }
+  
+  .skills .js::after {
+	width: 80%;
+	background-color: #ff00ff;
+  }
+  
+  .skills .mysql::after {
+	width: 75%;
+	background-color: #ffcc00; /* Yellow */
+  }
+  
+  .skills .os::after {
+	width: 65%;
+	background-color: #ff6600; /* Orange */
+  }
+  
+  .skills .c::after {
+	width: 70%;
+	background-color: #ff0000; /* Red */
+  }
+  
+  /* Animation for Bars */
+  @keyframes fill-bar {
+	0% {
+	  width: 0%;
+	}
+	100% {
+	  width: 100%; /* Controlled by specific bar class */
+	}
+  }
+  
+  /* Responsive Design */
+  
+  /* Mobile View for Skills Section */
+@media (max-width: 768px) {
+	/* General Mobile Adjustments */
+	.skills {
+	  padding: 50px 20px; /* Reduce padding for smaller screens */
+	}
+  
+	/* Title Adjustments */
+	.skills .title {
+	  font-size: 2rem;
+	  margin-bottom: 30px;
+	}
+  
+	/* Adjusting Skills Content Layout */
+	.skills .skills-content {
+	  flex-direction: column; /* Stack columns vertically */
+	  align-items: center;
+	}
+  
+	/* Left Column Styling */
+	.skills .column.left .text {
+	  font-size: 1.5rem;
+	  text-align: center;
+	}
+  
+	.skills .column.left p {
+	  font-size: 0.95rem;
+	  text-align: center;
+	  line-height: 1.6;
+	}
+  
+	.skills .column.left a {
+	  font-size: 0.9rem;
+	  padding: 8px 18px;
+	  margin-top: 10px;
+	}
+  
+	/* Right Column Styling */
+	.skills .column.right {
+	  width: 100%; /* Make skill bars take full width */
+	}
+  
+	/* Bar Info (Label and Percentage) */
+	.skills .info {
+	  font-size: 1rem;
+	}
+  
+	/* Skill Bars Adjustments */
+	.skills .line {
+	  height: 8px; /* Slightly thinner for mobile */
+	}
+  
+	.skills .line::after {
+	  animation: fill-bar-mobile 1.5s ease-in-out; /* Adjust animation for smoother effect */
+	}
+  
+	/* Specific Bar Colors */
+	.skills .html::after {
+	  width: 90%;
+	  background-color: #0078ff;
+	}
+  
+	.skills .css::after {
+	  width: 85%;
+	  background-color: #00ff00;
+	}
+  
+	.skills .js::after {
+	  width: 80%;
+	  background-color: #ff00ff;
+	}
+  
+	.skills .mysql::after {
+	  width: 75%;
+	  background-color: #ffcc00; /* Yellow */
+	}
+  
+	.skills .os::after {
+	  width: 65%;
+	  background-color: #ff6600; /* Orange */
+	}
+  
+	.skills .c::after {
+	  width: 70%;
+	  background-color: #ff0000; /* Red */
+	}
+  
+	/* Animation for Bars on Mobile */
+	@keyframes fill-bar-mobile {
+	  0% {
+		width: 0%;
+	  }
+	  100% {
+		width: 100%;
+	  }
+	}
+  
+	/* Adjust margin between bars */
+	.skills .bars {
+	  margin-bottom: 20px;
+	}
+  }
+  
+  
+  /* Footer */
+  footer {
+	background-color: #111;
+	color: #bbb;
+	padding: 20px;
+	text-align: center;
+  }
+  
+  footer a {
+	color: #0ff;
+	text-decoration: none;
+  }
+  
+  footer a:hover {
+	color: #222;
+	background-color: #0ff;
+  }
+  
+  /* Scroll Up Button */
+  .scroll-up-btn {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #0ff;
+	padding: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+  }
+  
+  .scroll-up-btn i {
+	color: #222;
+	font-size: 1.5rem;
+  }
+  
+  .scroll-up-btn:hover {
+	background-color: #222;
+  }
+  
+  .scroll-up-btn:hover i {
+	color: #0ff;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 768px) {
+	@media screen and (max-width: 768px) {
+		.navbar .menu {
+		  display: none; /* Hide menu by default */
+		  flex-direction: column; /* Stack menu items vertically */
+		  width: 100%;
+		  text-align: center;
+		  position: absolute;
+		  top: 60px; /* Position the menu below the navbar */
+		  left: 0;
+		  background-color: #111; /* Match navbar background */
+		  box-shadow: 0px 5px 15px rgba(0, 255, 255, 0.3); /* Neon glow effect */
+		}
+	  
+		.navbar .menu li {
+		  margin: 10px 0; /* Add vertical spacing between menu items */
+		}
+	  
+		.navbar .menu-btn {
+		  display: block; /* Show hamburger menu icon */
+		  cursor: pointer;
+		}
+	  
+		.navbar .menu.active {
+		  display: flex; /* Display menu when active */
+		}
+	  }
+
+
+	  .home .text-1 {
+        font-size: 2rem;
+    }
+
+    .home .text-2 {
+        font-size: 3.5rem;
+    }
+
+    .home .text-3 {
+        font-size: 1.8rem;
+    }
+
+    .home a {
+        font-size: 1.3rem;
+        padding: 12px 35px;
+    }
+}
+
+
+
+  /* Add padding to body to compensate for fixed navbar */
+  body {
+	margin-top: 70px; /* Prevent content from hiding under navbar */
+  }
+  
+  section {
+	padding-top: 100px; /* Ensure sections are not hidden by navbar */
+  }
+  
+  .home, .about, .services, .skills, .teams, .contact {
+	z-index: 1; /* Ensure sections don't overlap navbar */
+  }
+  
+  
+  .services .serv-content {
+	flex-direction: column;
+	gap: 20px;
+  }
+  
+  .skills .bars {
+	margin-bottom: 20px;
+  }
+/* General Styling */
+.contact {
+	background-color: #181818; /* Dark background for modern look */
+	color: #ddd;
+	padding: 60px 20px;
+	font-family: 'Poppins', sans-serif;
+  }
+  
+  .contact .title {
+	text-align: center;
+	font-size: 2.5rem;
+	color: #0ff;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	letter-spacing: 2px;
+	text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+  }
+  
+  /* Contact Content */
+  .contact-content {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+	flex-wrap: wrap;
+  }
+  
+  .column {
+	flex: 1;
+	min-width: 300px; /* Ensures responsiveness for smaller devices */
+	background-color: #222;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Left Column */
+  
+  .column.left .text {
+	font-size: 1.8rem;
+	color: #0ff;
+	margin-bottom: 15px;
+  }
+  
+  .column.left p {
+	font-size: 1rem;
+	line-height: 1.8;
+	color: #bbb;
+	margin-bottom: 20px;
+  }
+  
+  .icons .row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+  }
+  
+  .icons .row i {
+	font-size: 1.5rem;
+	color: #0ff;
+	margin-right: 15px;
+  }
+  
+  .icons .info .head {
+	font-weight: 600;
+	color: #fff;
+	font-size: 1rem;
+  }
+  
+  .icons .info .sub-title {
+	font-size: 0.9rem;
+	color: #bbb;
+  }
+  
+  /* Right Column */
+  .column.right .text {
+	font-size: 1.5rem;
+	color: #0ff;
+	margin-bottom: 20px;
+	text-align: center;
+  }
+  
+  /* Button Styling */
+  .buttonmsg {
+	display: inline-block;
+	background-color: #0ff;
+	color: #181818;
+	border: none;
+	border-radius: 25px;
+	padding: 15px 30px;
+	text-align: center;
+	margin-top: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0px 5px 20px rgba(0, 255, 255, 0.5);
+  }
+  
+  .buttonmsg:hover {
+	background-color: #181818;
+	color: #0ff;
+	box-shadow: 0px 5px 20px rgba(0, 255, 255, 0.7);
+	border: 2px solid #0ff;
+  }
+  
+  .buttonmsg a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	.contact-content {
+	  flex-direction: column; /* Stack columns */
+	  gap: 30px;
+	}
+  
+	.column {
+	  padding: 20px;
+	}
+  
+	.buttonmsg {
+	  width: 100%; /* Full-width button on smaller screens */
+	  text-align: center;
+	}
+  }
+  
+  
+  /* Footer Styling */
+.footer {
+	background-color: #181818; /* Dark background */
+	color: #ddd; /* Light gray text */
+	text-align: center;
+	padding: 20px 10px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	position: relative;
+  }
+  
+  .footer-content span {
+	display: block; /* Ensures proper alignment */
+	font-size: 0.9rem;
+	line-height: 1.8;
+  }
+  
+  .footer-content a {
+	color: #0ff; /* Neon blue for links */
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s;
+  }
+  
+  .footer-content a:hover {
+	color: #fff; /* White color on hover */
+	text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8); /* Glow effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	.footer-content span {
+	  font-size: 0.8rem; /* Slightly smaller font for mobile view */
+	}
+  }
+  
+  
+  /* Modal Styles */
+  .modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1001;
+  }
+  
+  .modal.active {
+	display: flex;
+  }
+  
+  .modal .modal-content {
+	background-color: #222;
+	padding: 40px;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 600px;
+  }
+  
+  .modal .modal-content h3 {
+	font-size: 2rem;
+	color: #0ff;
+	margin-bottom: 20px;
+  }
+  
+  .modal .modal-content p {
+	color: #bbb;
+	font-size: 1.2rem;
+	margin-bottom: 30px;
+  }
+  
+  .modal .modal-content button {
+	background-color: #0ff;
+	color: #222;
+	padding: 15px 30px;
+	border: none;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+  }
+  
+  .modal .modal-content button:hover {
+	background-color: #222;
+	color: #0ff;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes pulse {
+	0% {
+	  transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.05);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+  
+  button {
+	animation: pulse 1s ease-in-out infinite;
+  }
+  
+  /* Scroll Progress Bar */
+  .scroll-progress-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 4px;
+	background-color: #0ff;
+	z-index: 1000;
+	transition: width 0.3s ease;
+  }
+  
+  /* Keyframes for Pulse Animation */
+  @keyframes pulseAnimation {
+	0% {
+	  transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.1);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+/* Social Links Section */
+.social-links {
+	background-color: #181818; /* Dark background */
+	padding: 50px 20px;
+	font-family: 'Poppins', sans-serif; /* Consistent font */
+	text-align: center;
+	overflow: hidden; /* To avoid any overflow during animations */
+	position: relative;
+}
+
+/* Animated Glow Effect on Section */
+.social-links::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	background: radial-gradient(circle, rgba(0, 255, 255, 0.15), transparent 70%);
+	animation: move-glow 5s linear infinite;
+	z-index: 0;
+}
+
+/* Keyframes for Glow Animation */
+@keyframes move-glow {
+	0% {
+		transform: translateX(0) translateY(0);
+	}
+	50% {
+		transform: translateX(30px) translateY(30px);
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
+
+/* Section Title */
+.social-links h1 {
+	font-size: 2.5rem;
+	color: #0ff; /* Neon blue */
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	letter-spacing: 2px;
+	text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7); /* Neon glow effect */
+	position: relative;
+	z-index: 1;
+	animation: fade-in 1.5s ease-in-out;
+}
+
+/* Fade-In Animation */
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Social Links Container */
+.social-links .basr-social-share {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+.social-links .basr-social-share ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 20px; /* Space between social icons */
+}
+
+/* Individual Social Links */
+.social-links .basr-social-share ul li a {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background-color: #222; /* Dark circle background */
+	color: #ddd; /* Light gray icon color */
+	border-radius: 50%; /* Circular icons */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem; /* Icon size */
+	transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+	position: relative;
+	overflow: hidden;
+}
+
+/* Floating Animation for Icons */
+.social-links .basr-social-share ul li a:hover {
+	animation: float 1.5s infinite ease-in-out;
+}
+
+/* Floating Animation Keyframes */
+@keyframes float {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+/* Hover Effects for Social Links */
+.social-links .basr-social-share ul li a:hover {
+	transform: scale(1.2); /* Slight zoom effect */
+	color: #181818; /* Icon color changes to dark */
+	background-color: #0ff; /* Neon blue background */
+	box-shadow: 0px 5px 20px rgba(0, 255, 255, 0.7); /* Glow effect */
+}
+
+/* Icon-Specific Colors */
+.social-links .basr-social-share ul li a.github:hover {
+	background-color: #333; /* Darker gray for GitHub */
+	color: #fff; /* White GitHub icon */
+	box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5); /* Subtle white glow */
+}
+
+.social-links .basr-social-share ul li a.linkedin:hover {
+	background-color: #0077b5; /* LinkedIn blue */
+	color: #fff;
+	box-shadow: 0px 5px 20px rgba(0, 119, 181, 0.7); /* LinkedIn glow */
+}
+
+.social-links .basr-social-share ul li a.instagram:hover {
+	background: radial-gradient(circle at 30% 30%, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram gradient */
+	color: #fff;
+	box-shadow: 0px 5px 20px rgba(220, 39, 67, 0.7); /* Instagram glow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.social-links {
+		padding: 40px 10px; /* Adjust padding */
+	}
+
+	.social-links h1 {
+		font-size: 2rem; /* Adjust title size */
+		margin-bottom: 20px;
+	}
+
+	.social-links .basr-social-share ul {
+		flex-direction: column; /* Stack icons vertically */
+		gap: 15px; /* Reduce gap */
+	}
+
+	.social-links .basr-social-share ul li a {
+		width: 50px; /* Smaller circles */
+		height: 50px;
+		font-size: 1.3rem; /* Smaller icons */
+	}
+}
+
+  
