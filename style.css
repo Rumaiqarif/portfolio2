@@ -227,7 +227,7 @@
     letter-spacing: 2px;
 	text-transform: uppercase; /* Slightly increased letter spacing */
     display: inline-block; /* Make sure it behaves like inline text */
-    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081; /* Glowing effect */
+/*     text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081; /* Glowing effect */ */
 }
 
 /* Button Link Styling */
@@ -299,7 +299,7 @@
     letter-spacing: 2px;
 	text-transform: uppercase; /* Slightly increased letter spacing */
     display: inline-block; /* Make sure it behaves like inline text */
-    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081;
+/*     text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081; */
 
   }
   /* Subtitle Styling */
