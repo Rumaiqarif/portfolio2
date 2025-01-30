@@ -201,7 +201,7 @@
 /* Text 1 Styling */
 .home .text-1 {
     font-size: 2.5rem; /* Larger font size for the first text */
-    color: rgba(255, 255, 255, 0.7); /* Slightly faded color for the first text */
+/*     color: rgba(255, 255, 255, 0.7); /* Slightly faded color for the first text */ */
 }
 
 /* Text 2 Styling */
