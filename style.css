@@ -209,7 +209,7 @@
     font-size: 4rem; /* Larger font size for name */
     font-weight: 700; /* Bold weight */
     color: #0ff; /* Neon blue for emphasis */
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.8); /* Glow effect for the name */
+/*     text-shadow: 0 0 10px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.8); /* Glow effect for the name */ */
 }
 
 /* Text 3 Styling */
